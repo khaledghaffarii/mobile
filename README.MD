@@ -26,10 +26,10 @@ Ce projet est une application de commerce électronique développée en React Na
 
 - React Native
 - TypeScript
-- Redux (pour la gestion de l'état global)
+- Context (pour la gestion de l'état global)
 - React Navigation (pour la navigation entre les écrans)
 - Axios (pour les requêtes HTTP)
-- ESLint et Prettier (pour le linting et le formatage du code)
+- Prettier (pour le linting et le formatage du code)
 
 ## Structure du code
 
