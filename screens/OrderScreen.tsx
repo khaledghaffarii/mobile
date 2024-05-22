@@ -14,14 +14,13 @@ const OrderScreen: React.FC<{ navigation: any; route: any }> = ({
   const { cart, clearCart } = useContext(CartContext);
   const totalPrice = route.params?.totalPrice || 0;
 
-  // Fonction pour regrouper les produits par leur ID et accumuler la quantité
   const groupProducts = (cart: Product[]) => {
     const groupedProducts: { [key: string]: Product } = {};
     cart.forEach((product) => {
       if (groupedProducts[product.id]) {
-        groupedProducts[product.id].quantity += 1; // Si le produit existe déjà, augmentez la quantité
+        groupedProducts[product.id].quantity += 1;
       } else {
-        groupedProducts[product.id] = { ...product, quantity: 1 }; // Sinon, initialisez la quantité à 1
+        groupedProducts[product.id] = { ...product, quantity: 1 };
       }
     });
     return Object.values(groupedProducts);
